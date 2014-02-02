@@ -1,6 +1,8 @@
 language: java
-
-jdk:
-  - oraclejdk7
-
-script: ./gradlew clean build 
+jdk: oraclejdk7
+before_install:
+  - chmod +x gradlew
+install:
+  - true
+script: 
+  - TERM=dumb ./gradlew clean build
